@@ -1,16 +1,33 @@
 {
-  "name": "rxjs-starter",
+  "name": "typescript-algorithms",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "parcel-bundler": "^1.12.3",
-    "rxjs": "^7.8.1"
-  },
-  "devDependencies": {},
+  "description": "Collection of algorithms and data structures",
+  "main": "app.js",
   "scripts": {
-    "start": "parcel index.html"
+    "build": "tsc -p tsconfig.json",
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brian Troncone, Ultimate Courses",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianRomanski/algorithms-typescript"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "devDependencies": {
+    "awesome-typescript-loader": "3.4.1",
+    "typescript": "^5.0.2",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7"
+  },
+  "author": "Adrian Romanski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdrianRomanski/algorithms-typescript/issues"
+  },
+  "homepage": "https://github.com/AdrianRomanski/algorithms-typescript#readme",
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  }
 }
