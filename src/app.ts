@@ -1,3 +1,3 @@
-import {filteringOperators} from "./filtering_operators";
+import {rateOperators} from "./rate_operators";
 
-filteringOperators();
+rateOperators();

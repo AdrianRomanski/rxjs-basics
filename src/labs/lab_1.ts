@@ -1,4 +1,4 @@
-import {fromEvent, map} from "rxjs";
+import {asyncScheduler, fromEvent, map, tap, throttleTime} from "rxjs";
 
 export function scrollIndicator() {
 
@@ -14,8 +14,17 @@ export function scrollIndicator() {
     const scroll$  = fromEvent(document, 'scroll');
     const progress$ = scroll$.pipe(
         // percent progress
-        // @ts-ignore
-        map((scroll) => calculateScrollPercent(scroll.target.scrollingElement))
+        throttleTime(30, asyncScheduler, {
+            leading: false,
+            trailing: true
+        }),
+        map((scroll) =>
+            calculateScrollPercent(
+                // @ts-ignore
+                scroll.target.scrollingElement
+            )
+        ),
+        tap(console.log)
     )
 
     // elems
