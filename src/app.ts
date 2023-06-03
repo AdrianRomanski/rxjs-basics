@@ -1,3 +1,3 @@
-import {rateOperators} from "./rate_operators";
+import {lab3} from "./labs/lab_3";
 
-rateOperators();
+lab3()
