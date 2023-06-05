@@ -1,3 +1,3 @@
-import {lab3} from "./labs/lab_3";
+import {mortgageCalculator} from "./labs/lab_4";
 
-lab3()
+mortgageCalculator();

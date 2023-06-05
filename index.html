@@ -12,6 +12,54 @@
     </header>
     <div id="app">
       <h1>Ultimate RxJS</h1>
+
+
+      <div class="calculator-wrapper">
+        <h2>Mortgage Calculator</h2>
+        <div class="form-wrapper">
+          <label for="loanAmount">
+            Mortgage Amount ($)
+          </label>
+          <input type="number" name="loanAmount" id="loanAmount" />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="interest">
+            Interest Rate (%)
+          </label>
+          <input type="number" name="interest" id="interest" />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="loanLength">Mortgage Length</label>
+          <div>
+            <input
+                    type="radio"
+                    name="loanLength"
+                    class="loanLength"
+                    value="180"
+            />
+            15 yr
+            <input
+                    type="radio"
+                    name="loanLength"
+                    class="loanLength"
+                    value="360"
+            />
+            30 yr
+          </div>
+        </div>
+        <div>
+          Your expected monthly payment is: $<strong id="expected"></strong>
+        </div>
+      </div>
+
+
+
+
+
+
+
 <!--      progress bar-->
 <!--      <div class="progress-bar"></div>-->
 <!--      <div>-->
@@ -64,64 +112,80 @@
 <!--      </button>-->
 
 
-      <label>some input</label>
-      <input id="text-input">
-      <div id="typehead-container"></div>
+<!--      <label>some input</label>-->
+<!--      <input id="text-input">-->
+<!--      <div id="typehead-container"></div>-->
 
 
-      <div class="radio-container">
-        <input
-                type="radio"
-                class="radio-option"
-                name="operator"
-                value="mergeMap">
-        <label>mergeMap</label>
-      </div>
-      <div class="radio-container">
-        <input
-                type="radio"
-                class="radio-option"
-                name="operator"
-                value="switchMap">
-        <label>switchMap</label>
-      </div>
-      <div class="radio-container">
-        <input
-                type="radio"
-                class="radio-option"
-                name="operator"
-                value="concatMap">
-        <label>concatMap</label>
-      </div>
+<!--      <div class="radio-container">-->
+<!--        <input-->
+<!--                type="radio"-->
+<!--                class="radio-option"-->
+<!--                name="operator"-->
+<!--                value="mergeMap">-->
+<!--        <label>mergeMap</label>-->
+<!--      </div>-->
+<!--      <div class="radio-container">-->
+<!--        <input-->
+<!--                type="radio"-->
+<!--                class="radio-option"-->
+<!--                name="operator"-->
+<!--                value="switchMap">-->
+<!--        <label>switchMap</label>-->
+<!--      </div>-->
+<!--      <div class="radio-container">-->
+<!--        <input-->
+<!--                type="radio"-->
+<!--                class="radio-option"-->
+<!--                name="operator"-->
+<!--                value="concatMap">-->
+<!--        <label>concatMap</label>-->
+<!--      </div>-->
 
-      <form>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" type="text" name="email">
-        </div>
-        <div class="form-group">
-          <label for="username">password</label>
-          <input id="username" type="text" name="username">
-        </div>
-        <button id="login" type="button">Login</button>
-      </form>
-      <p>
-        Start polling to request random
-        <a href="https//random.dog/">dog</a>
-        images
-      </p>
-      <p>Polling Status:
-        <span id="polling-status"></span>
-      </p>
-      <button id="start">Start Polling</button>
-      <button id="stop">Stop Polling</button>
-      <img
-              style="max-width: 400px; max-height: 400px;"
-              id="dog"
-              src="https://random.dog/10fa025a-b04a-47d7-bfed-98747269b6c2.jpg"
-              alt="dog!"
-      />
+<!--      <form>-->
+<!--        <div class="form-group">-->
+<!--          <label for="email">Email</label>-->
+<!--          <input id="email" type="text" name="email">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <label for="username">password</label>-->
+<!--          <input id="username" type="text" name="username">-->
+<!--        </div>-->
+<!--        <button id="login" type="button">Login</button>-->
+<!--      </form>-->
+<!--      <p>-->
+<!--        Start polling to request random-->
+<!--        <a href="https//random.dog/">dog</a>-->
+<!--        images-->
+<!--      </p>-->
+<!--      <p>Polling Status:-->
+<!--        <span id="polling-status"></span>-->
+<!--      </p>-->
+<!--      <button id="start">Start Polling</button>-->
+<!--      <button id="stop">Stop Polling</button>-->
+<!--      <img-->
+<!--              style="max-width: 400px; max-height: 400px;"-->
+<!--              id="dog"-->
+<!--              src="https://random.dog/10fa025a-b04a-47d7-bfed-98747269b6c2.jpg"-->
+<!--              alt="dog!"-->
+<!--      />-->
+
+<!--    <h2 id="countdown"></h2>-->
+<!--    <div id="message"></div>-->
+<!--    <button id="start">-->
+<!--      Start Timer-->
+<!--    </button>-->
+<!--    <button id="pause">-->
+<!--      Pause Timer-->
+<!--    </button>-->
+
+<!--    <input type="number" id="first">-->
+<!--    <input type="number" id="second">-->
+
     </div>
+
+
+
     <script src="app.js"></script>
   </body>
 </html>
