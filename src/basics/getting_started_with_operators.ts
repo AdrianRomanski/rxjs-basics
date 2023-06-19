@@ -36,6 +36,7 @@ export function gettingStartedWithOperators(): void {
 
     const numbers = [1,2,3,4,5];
 
+    // @ts-ignore
     const totalReducer = (accumulator, currentValue) => {
         return accumulator + currentValue;
     };

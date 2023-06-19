@@ -17,7 +17,9 @@ export function schedulers(): void {
 // async scheduler
 function executeTasksAsynchronously(): void {
     const observer = {
+        // @ts-ignore
         next: val => console.log('next', val),
+        // @ts-ignore
         error: err => console.log('error', err),
         complete: () => console.log('complete')
     };
@@ -83,7 +85,9 @@ function executeTasksAsynchronously(): void {
 // asap scheduler
 function deferTaskExecution(): void {
     const observer = {
+        // @ts-ignore
         next: val => console.log('next', val),
+        // @ts-ignore
         error: err => console.log('error', err),
         complete: () => console.log('complete')
     };
@@ -142,6 +146,7 @@ function scheduleTaskBeforeBrowserRepaints(): void {
     interval(0, animationFrameScheduler).pipe(
         takeWhile(val => val <= 200)
     ).subscribe(val => {
+        // @ts-ignore
         ball.style.transform = `translate3d(0, ${val}px, 0`;
     });
 }

@@ -2,6 +2,7 @@ import { combineLatest, fromEvent, of } from 'rxjs';
 import { map, filter, delay, mergeMap, tap, share } from 'rxjs/operators';
 export function mortgageCalculator(): void {
 
+    // @ts-ignore
     function calculateMortgage(interest, loanAmount, loanLength) {
         const calculatedInterest = interest / 1200;
         const total =
@@ -19,6 +20,7 @@ export function mortgageCalculator(): void {
     const expected = document.getElementById('expected');
 
 // helpers
+    // @ts-ignore
     const createInputValueStream = elem => {
         return fromEvent(elem, 'input').pipe(
             map((event: any) => parseFloat(event.target.value))
@@ -26,6 +28,7 @@ export function mortgageCalculator(): void {
     };
 
 // simulating a save request
+    // @ts-ignore
     const saveResponse = mortageAmount => {
         return of(mortageAmount).pipe(delay(1000));
     };
@@ -61,6 +64,7 @@ export function mortgageCalculator(): void {
     );
 
     calculation$.subscribe(mortageAmount => {
+        // @ts-ignore
         expected.innerHTML = mortageAmount;
     });
 

@@ -19,12 +19,17 @@ export function lab3(): void {
     const dogImage: any = document.getElementById('dog');
 
 // streams
+    // @ts-ignore
     const startClick$ = fromEvent(startButton, 'click');
+    // @ts-ignore
     const stopClick$ = fromEvent(stopButton, 'click');
     let headers = {
         'Content-Type': 'application/json',
             'x-rxjs-is': 'Awesome!'
     };
+    // @ts-ignore
+    // @ts-ignore
+    // @ts-ignore
     startClick$
         .pipe(
             /*
@@ -36,6 +41,7 @@ export function lab3(): void {
              */
             exhaustMap(() =>
                 timer(0, 5000).pipe(
+                    // @ts-ignore
                     tap(() => (pollingStatus.innerHTML = 'Active')),
                     switchMapTo(
                         ajax.getJSON('https://random.dog/woof.json', headers).pipe(pluck('url')),
@@ -48,6 +54,7 @@ export function lab3(): void {
                      * We'll use finalize to update the status to stopped
                      * each time the inner observable completes.
                      */
+                    // @ts-ignore
                     finalize(() => (pollingStatus.innerHTML = 'Stopped'))
                 )
             )

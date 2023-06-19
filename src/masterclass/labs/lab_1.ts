@@ -6,8 +6,10 @@ export function lab_1(): void {
 
     loadingService.loadingStatus$.subscribe(isLoading => {
         if (isLoading) {
+            // @ts-ignore
             loadingOverlay.classList.add('open');
         } else {
+            // @ts-ignore
             loadingOverlay.classList.remove('open')
         }
     });

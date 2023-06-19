@@ -2,7 +2,7 @@ import {asyncScheduler, fromEvent, map, tap, throttleTime} from "rxjs";
 
 export function scrollIndicator() {
 
-    function calculateScrollPercent(element) {
+    function calculateScrollPercent(element: any) {
         const {
             scrollTop,
             scrollHeight,

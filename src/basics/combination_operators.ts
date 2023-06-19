@@ -47,7 +47,9 @@ export function combinationOperators(): void {
 
 // streams
     const counter$ = interval(1000);
+    // @ts-ignore
     const pauseClick$ = fromEvent(pauseButton, 'click');
+    // @ts-ignore
     const startClick$ = fromEvent(startButton, 'click');
 
     const COUNTDOWN_FROM = 10;
@@ -80,6 +82,7 @@ export function combinationOperators(): void {
         .subscribe(value => {
             countdown.innerHTML = value;
             if (!value) {
+                // @ts-ignore
                 message.innerHTML = 'Liftoff!';
             }
         });
@@ -96,6 +99,7 @@ export function combinationOperators(): void {
     //   withLatestFrom(interval(1000))
     // ).subscribe(console.log);
 
+    // @ts-ignore
     const keyupAsValue = elem => {
         return fromEvent(elem, 'keyup').pipe(
             map((event: any) => event.target.valueAsNumber)

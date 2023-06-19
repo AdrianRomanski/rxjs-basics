@@ -10,6 +10,7 @@ export function countDownTimer(): void {
 
     // counter$.subscribe(console.log);
 
+    // @ts-ignore
     const abortClick$ = fromEvent(abortButton, 'click');
 
     counter$.pipe(
@@ -20,9 +21,11 @@ export function countDownTimer(): void {
         takeWhile(value => value >= 0),
         takeUntil(abortClick$)
     ).subscribe(value => {
+        // @ts-ignore
         countdown.innerHTML = '' + value;
         if(!value) {
-          message.innerHTML = 'Liftoff';
+          // @ts-ignore
+            message.innerHTML = 'Liftoff';
         }
     });
 

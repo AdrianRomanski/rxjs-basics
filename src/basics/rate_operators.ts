@@ -18,6 +18,7 @@ export function rateOperators(): void {
 
     // streams
     const click$ = fromEvent(document, 'click');
+    // @ts-ignore
     const input$ = fromEvent(inputBox, 'keyup');
     const timer$ = interval(1000);
 

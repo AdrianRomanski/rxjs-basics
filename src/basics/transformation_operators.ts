@@ -19,6 +19,7 @@ export function transformationOperators(): void {
     const GITHUB_BASE_URL = 'https://api.openbrewerydb.org/breweries'
 
     const inputBox = document.getElementById('text-input');
+    // @ts-ignore
     const input$ = fromEvent(inputBox, 'keyup');
 
 
@@ -112,6 +113,7 @@ export function transformationOperators(): void {
         distinctUntilChanged(),
         switchMap((searchTerm) => {
             return ajax.getJSON(`${GITHUB_BASE_URL}?by_name=${searchTerm}`).pipe(
+                // @ts-ignore
                 catchError((err, caught) => {
                     //throw error, return obs
                     return EMPTY;
@@ -122,6 +124,7 @@ export function transformationOperators(): void {
         console.log('response', response)
         // @ts-ignore
         typeHeadContainer.innerHTML = response.map(
+            // @ts-ignore
             b => b.name
         ).join('<br>')
     });
@@ -146,6 +149,7 @@ export function transformationOperators(): void {
     /*
  * BEGIN SECOND SECTION
  */
+    // @ts-ignore
     const saveAnswer = answer => {
         // simulate delayed request
         return of(`Saved: ${answer}`).pipe(delay(1500));
@@ -190,6 +194,7 @@ export function transformationOperators(): void {
 
     const loginButton = document.getElementById('login');
 
+    // @ts-ignore
     const login$ = fromEvent(loginButton, 'click');
 
     login$.pipe(

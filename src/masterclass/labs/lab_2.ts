@@ -8,6 +8,7 @@ export class ObservableStore {
     private _store: BehaviorSubject<any>;
     private _stateUpdate = new Subject();
 
+    // @ts-ignore
     constructor(initialState) {
         this._store = new BehaviorSubject(initialState);
         this._stateUpdate.pipe(
