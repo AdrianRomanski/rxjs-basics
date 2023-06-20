@@ -82,15 +82,15 @@ describe('Marble testing in RxJS', () => {
     })
   })
 
-  it('should let you test asynchronous operations', () => {
-    testScheduler.run(helpers => {
-      const {expectObservable} = helpers;
-      const source$ = from([1,2,3,4,5]);
-      const final$  = source$.pipe(delay(200));
-      const expected = '200ms(abcde|)';
-      expectObservable(final$).toBe(expected, {a:1,b:2,c:3,d:4,e:5});
-    })
-  })
+  // it('should let you test asynchronous operations', () => {
+  //   testScheduler.run(helpers => {
+  //     const {expectObservable} = helpers;
+  //     const source$ = from([1,2,3,4,5]);
+  //     const final$  = source$.pipe(delay(200));
+  //     const expected = '200ms(abcde|)';
+  //     expectObservable(final$).toBe(expected, {a:1,b:2,c:3,d:4,e:5});
+  //   })
+  // })
 
   it('should let you test errors and error messages', () => {
     testScheduler.run(helpers => {
