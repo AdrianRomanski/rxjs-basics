@@ -5,6 +5,10 @@ import {endWithOperator} from "./websites/learnrxjs/operators/combination/endWit
 import {forkJoinOperator} from "./websites/learnrxjs/operators/combination/forkJoinOperator";
 import {mergeOperator} from "./websites/learnrxjs/operators/combination/mergeOperator";
 import {mergeAllOperator} from "./websites/learnrxjs/operators/combination/mergeAllOperator";
+import {pairwiseOperator} from "./websites/learnrxjs/operators/combination/pairwiseOperator";
+import {raceOperator} from "./websites/learnrxjs/operators/combination/raceOperator";
+import {withLatestFromOperator} from "./websites/learnrxjs/operators/combination/withLatestFromOperator";
+import {zipOperator} from "./websites/learnrxjs/operators/combination/zipOperator";
 
 @Component({
   selector: 'app-root',
@@ -15,6 +19,6 @@ export class AppComponent implements OnInit{
   title = 'rxjs';
 
   ngOnInit(): void {
-    mergeAllOperator();
+    zipOperator();
   }
 }
