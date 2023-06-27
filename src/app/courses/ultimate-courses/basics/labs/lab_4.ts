@@ -50,7 +50,7 @@ export function mortgageCalculator(): void {
         // proving the stream is shared
         tap(console.log),
         /*
-         *  If a field is empty, we'll just ignore the update for now
+         *  If a field is emptyOperator, we'll just ignore the update for now
          *  by filtering out invalid values.
          */
         filter(mortageAmount => !isNaN(mortageAmount)),

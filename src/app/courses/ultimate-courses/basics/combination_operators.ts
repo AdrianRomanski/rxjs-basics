@@ -67,7 +67,7 @@ export function combinationOperators(): void {
             /*
              * Depending on whether start or pause was clicked,
              * we'll either switch to the interval observable,
-             * or to an empty observable which will act as a pause.
+             * or to an emptyOperator observable which will act as a pause.
              */
             switchMap(shouldStart => {
                 return shouldStart ? counter$ : empty();

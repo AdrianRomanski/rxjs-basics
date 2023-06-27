@@ -1,8 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {defaultIfEmptyOperator} from "./websites/learnrxjs/operators/conditional/defaultIfEmptyOperator";
-import {everyOperator} from "./websites/learnrxjs/operators/conditional/everyOperator";
-import {iifOperator} from "./websites/learnrxjs/operators/conditional/iifOperator";
-import {sequenceEqualOperator} from "./websites/learnrxjs/operators/conditional/sequenceEqualOperator";
+import {fromOperator} from "./websites/learnrxjs/operators/creation/fromOperator";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +10,6 @@ export class AppComponent implements OnInit{
   title = 'rxjs';
 
   ngOnInit(): void {
-    sequenceEqualOperator();
+    fromOperator();
   }
 }
