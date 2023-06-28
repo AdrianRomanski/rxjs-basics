@@ -270,7 +270,7 @@ function automateMulticastingAndReplying(): void {
     const ajax$ = ajax('https://api.github.com/users/octocat');
 
     /*
-     * shareReplay turns a unicast observable into multicasted
+     * shareReplayOperator turns a unicast observable into multicasted
      * observable, utilizing a ReplaySubject behind the scenes.
      *
      * In this example, we are mapping any clicks to an ajax
@@ -279,7 +279,7 @@ function automateMulticastingAndReplying(): void {
     const sharedClick$ = click$.pipe(
         mergeMapTo(ajax$),
         /*
-         * By default shareReplay shares all old values, like
+         * By default shareReplayOperator shares all old values, like
          * a standard ReplaySubject. In this case, we only want
          * to share the most recent response.
          */
