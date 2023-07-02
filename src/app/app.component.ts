@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {publishOperator} from "./websites/learnrxjs/operators/multicasting/publishOperator";
-import {multicastOperator} from "./websites/learnrxjs/operators/multicasting/multicastOperator";
-import {shareReplayOperator} from "./websites/learnrxjs/operators/multicasting/shareReplayOperator";
+import {filterOperator} from "./websites/learnrxjs/operators/filtering/filterOperator";
 
 @Component({
   selector: 'app-root',
@@ -12,6 +10,6 @@ export class AppComponent implements OnInit{
   title = 'rxjs';
 
   ngOnInit(): void {
-    shareReplayOperator();
+    filterOperator();
   }
 }
