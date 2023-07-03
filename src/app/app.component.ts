@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {bufferOperator} from "./websites/learnrxjs/operators/transformation/bufferOperator";
-import {bufferCountOperator} from "./websites/learnrxjs/operators/transformation/bufferCountOperator";
-import {bufferTimeOperator} from "./websites/learnrxjs/operators/transformation/bufferTimeOperator";
-import {bufferToggleOperator} from "./websites/learnrxjs/operators/transformation/bufferToggleOperator";
+import {concatMapToOperator} from "./websites/learnrxjs/operators/transformation/concatMapToOperator";
+import {exhaustMapOperator} from "./websites/learnrxjs/operators/transformation/exhaustMapOperator";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +11,6 @@ export class AppComponent implements OnInit{
   title = 'rxjs';
 
   ngOnInit(): void {
-    bufferToggleOperator();
+    exhaustMapOperator();
   }
 }
