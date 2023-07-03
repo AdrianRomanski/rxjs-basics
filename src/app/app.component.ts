@@ -1,12 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {filterOperator} from "./websites/learnrxjs/operators/filtering/filterOperator";
-import {firstOperator} from "./websites/learnrxjs/operators/filtering/firstOperator";
-import {ignoreElementsOperator} from "./websites/learnrxjs/operators/filtering/ignoreElementsOperator";
-import {lastOperator} from "./websites/learnrxjs/operators/filtering/lastOperator";
-import {sampleOperator} from "./websites/learnrxjs/operators/filtering/sampleOperator";
-import {singleOperator} from "./websites/learnrxjs/operators/filtering/singleOperator";
-import {skipOperator} from "./websites/learnrxjs/operators/filtering/skipOperator";
-import {skipUntilOperator} from "./websites/learnrxjs/operators/filtering/skipUntilOperator";
+import {bufferOperator} from "./websites/learnrxjs/operators/transformation/bufferOperator";
+import {bufferCountOperator} from "./websites/learnrxjs/operators/transformation/bufferCountOperator";
+import {bufferTimeOperator} from "./websites/learnrxjs/operators/transformation/bufferTimeOperator";
+import {bufferToggleOperator} from "./websites/learnrxjs/operators/transformation/bufferToggleOperator";
 
 @Component({
   selector: 'app-root',
@@ -17,6 +13,6 @@ export class AppComponent implements OnInit{
   title = 'rxjs';
 
   ngOnInit(): void {
-    // skipUntilOperator();
+    bufferToggleOperator();
   }
 }
